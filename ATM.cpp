@@ -1,4 +1,4 @@
-//ATM.c
+//ATM.cpp
 /*
  *
  * Rút tiền từ ATM
@@ -8,8 +8,9 @@
  * còn lỗi với trường hợp cần rút xxx50.000 và trong máy không còn đủ tờ 50.000
  * 
 */
-#include <stdio.h>
-#include <stdlib.h>
+#include <iostream>
+#include <cstdlib>
+using namespace std;
 int main()
 {
     system("chcp 65001");
@@ -22,18 +23,18 @@ int main()
                  soto[] = {0, 0, 0, 0};
     for (int j = 0; j < 4; j++)
     {
-        printf("Nhập số tờ tiền %d.000: ", menhgia[j]);
-        scanf("%d", &soto[j]);
+        cout << "Nhập số tờ tiền " << menhgia[j] << ".000: ";
+        cin >> soto[j];
         con = con + menhgia[j] * soto[j];
     }
-    printf(" Tổng số tiền ATM hiện tại còn: %d.000\n\n", con);
-    printf("Bạn cần rút bao nhiêu tiền? (Bội của 1000) ");
-    scanf("%d", &rut);
+    cout << " Tổng số tiền ATM hiện tại còn: " << con << ".000\n\n";
+    cout << "Bạn cần rút bao nhiêu tiền? (Bội của 1000) ";
+    cin >> rut;
     while (rut > con || rut < 50)
     {
-        printf("\nATM hiện tại không còn đủ tiền. Hoặc bạn đã nhập số tiền nhỏ hơn 50.000\nHãy nhập số tiền khác, nhỏ hơn %d.000 và lớn hơn 50.000 \n\n", con);
-        printf("Bạn cần rút bao nhiêu tiền? (Bội của 1000) ");
-        scanf("%d", &rut);
+        cout << "\nATM hiện tại không còn đủ tiền. Hoặc bạn đã nhập số tiền nhỏ hơn 50.000\nHãy nhập số tiền khác, nhỏ hơn " << con << ".000 và lớn hơn 50.000 \n\n";
+        cout << "Bạn cần rút bao nhiêu tiền? (Bội của 1000) ";
+        cin >> rut;
     }
     while (rut > 0)
     {
@@ -45,7 +46,7 @@ int main()
         }
         else
             rut = rut % menhgia[i]; // phần còn lại sau khi rút số tờ với mệnh giá trên
-        printf(" Hãy lấy %d tờ: %d.000 \n", temp, menhgia[i]);
+        cout << " Hãy lấy " << temp << " tờ: " << menhgia[i] << ".000 \n";
         i++;
     }
     return 0;
