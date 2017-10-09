@@ -4,15 +4,16 @@
  * Rút tiền từ ATM
  * biết số tờ tiền 500.000, 200.000, 100.000, 50.000 còn lại trong máy
  * hiển thị số tờ tiền với từng mệnh giá tương ứng cần đưa ra cho khách hàng
- * 
+ *
  * còn lỗi với trường hợp cần rút xxx50.000 và trong máy không còn đủ tờ 50.000
- * 
+ *
 */
 #include <stdio.h>
 #include <stdlib.h>
+#include <windows.h>
 int main()
 {
-    system("chcp 65001");
+    SetConsoleOutputCP(65001);
     system("cls");
     unsigned int rut = 0,
                  con = 0,
@@ -35,6 +36,7 @@ int main()
         printf("Bạn cần rút bao nhiêu tiền? (Bội của 1000) ");
         scanf("%d", &rut);
     }
+    printf(" Bạn hãy lấy:\n");
     while (rut > 0)
     {
         temp = rut / menhgia[i]; // số tờ cần rút ra với từng mệnh giá 500, 200, 100, 50
@@ -45,7 +47,7 @@ int main()
         }
         else
             rut = rut % menhgia[i]; // phần còn lại sau khi rút số tờ với mệnh giá trên
-        printf(" Hãy lấy %d tờ: %d.000 \n", temp, menhgia[i]);
+        printf("  %d tờ %d.000 \n", temp, menhgia[i]);
         i++;
     }
     return 0;

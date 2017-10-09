@@ -13,8 +13,9 @@
  */
 #include <stdio.h>
 #include <stdlib.h>
+#include <windows.h>
 int main(){
-	system("chcp 65001");
+  	SetConsoleOutputCP(65001);
 	system("cls");
 	int sum = 0, min, max, max_chan, max_le;
 	unsigned int n, chan = 0, le = 0;

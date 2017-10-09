@@ -4,9 +4,9 @@
  * Rút tiền từ ATM
  * biết số tờ tiền 500.000, 200.000, 100.000, 50.000 còn lại trong máy
  * hiển thị số tờ tiền với từng mệnh giá tương ứng cần đưa ra cho khách hàng
- * 
+ *
  * còn lỗi với trường hợp cần rút xxx50.000 và trong máy không còn đủ tờ 50.000
- * 
+ *
 */
 #include <iostream>
 #include <cstdlib>
