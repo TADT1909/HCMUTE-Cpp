@@ -2,14 +2,15 @@
 /*
  * INPUT: n số nguyên
  *
- * OUTPUT:	tổng n số nguyên
- * 			giá trị trung bình cộng
- * 			số lớn nhất
- * 			số bé nhất
- * 			số chẵn lớn nhất
- * 			số lẻ lớn nhất
- * 			số số chắn
- * 			số số lẻ
+ * OUTPUT:
+ * 	tổng n số nguyên
+ * 	giá trị trung bình cộng
+ * 	số lớn nhất
+ * 	số bé nhất
+ * 	số chẵn lớn nhất
+ * 	số lẻ lớn nhất
+ * 	số số chắn
+ * 	số số lẻ
  */
 #include <stdio.h>
 #include <stdlib.h>
